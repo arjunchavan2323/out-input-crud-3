@@ -36,9 +36,12 @@ editobjstd !:istd
       isactive:true,
       stdId:'12454'
     }  ]
+
+  
   constructor(private _snackbarser : snackbarservice) { }
 
   ngOnInit(): void {
+  
   }
 
   onaddstd(std:istd){
@@ -63,6 +66,9 @@ this.editobjstd=editstd
   onupdate(updateobj:istd){
     let getindex=this.StudentArr.findIndex(t => (t.stdId===updateobj.stdId))
     this.StudentArr[getindex]=updateobj
+   
+  
+   
   }
 
 }
