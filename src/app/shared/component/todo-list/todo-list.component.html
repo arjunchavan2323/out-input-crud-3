@@ -1,0 +1,24 @@
+<div class="card" *ngIf="gettodos.length >0; else notodoes">
+    <div class="card-body">
+        <ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between" *ngFor="let todo of gettodos; trackBy : tracktodo">
+       <span> {{todo.TodoItem}}</span>
+       <div>
+        <button class="mr-3"  mat-mini-fab color="primary"  (click)="onedittodo(todo)">
+            <mat-icon>edit</mat-icon>
+        </button>
+        <button  mat-mini-fab  color="accent" (click)="onremove(todo.TodoId)">
+            <mat-icon>delete</mat-icon>
+
+        </button>
+       </div>
+
+    </li>
+</ul>
+    </div>
+</div>
+
+
+<ng-template #notodoes>
+    <div class="alert alert-info">pls enter valid todo</div>
+</ng-template>

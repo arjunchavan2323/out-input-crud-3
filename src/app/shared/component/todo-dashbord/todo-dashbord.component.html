@@ -1,0 +1,8 @@
+<div class="row">
+    <div class="col-sm-6">
+<app-todo-form (eventemiterupdate)="onupdate($event)" [gettodoes]="editobjtodo" (emitnewtodo)="onaddtodos($event)"></app-todo-form>
+    </div>
+    <div class="col-sm-6">
+<app-todo-list (eventemiteredittodo)="onedittodo($event)" (eventemiterremove)="onremovet($event)" [gettodos]="TodoArray"></app-todo-list>
+    </div>
+</div>

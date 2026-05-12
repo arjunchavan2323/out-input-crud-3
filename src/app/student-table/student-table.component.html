@@ -1,0 +1,44 @@
+
+
+
+<table class="table table-bordered" *ngIf="getstudent.length >0 else nostudent">
+    <thead>
+        <tr>
+            <th>sr.No</th>
+            <th>fname</th>
+            <th>lname</th>
+            <th>email</th>
+            <th>contact</th>
+            <th>isactive</th>
+            <th>edit</th>
+            <th>delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let std of getstudent; index as i; trackBy : trackstudent">
+            <td>{{i+1}}</td>
+            <td>{{std.fname}}</td>
+            <td>{{std.lname}}</td>
+            <td>{{std.email}}</td>
+            <td>{{std.contact}}</td>
+            <td>
+                {{std.isactive ? 'Yes' :'No'}}
+            </td>
+            <td>
+                <button mat-mini-fab color="primary" (click)="onedit(std)">
+                    <mat-icon>edit</mat-icon>
+                </button>
+            </td>
+               <td>
+                <button mat-mini-fab color="warn" (click)="ondelete(std.stdId)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+<ng-template #nostudent>
+    <p class="alert alert-info">No Data base base !!!</p>
+</ng-template>
