@@ -12,6 +12,9 @@ import { StudentDashbordComponent } from './student-dashbord/student-dashbord.co
 import { StudentListComponent } from './student-list/student-list.component';
 import { StudentTableComponent } from './student-table/student-table.component';
 import { StudentFormComponent } from './student-form/student-form.component';
+import { CricketDashbordComponent } from './cricket-dashbord/cricket-dashbord.component';
+import { CricketFormComponent } from './cricket-form/cricket-form.component';
+import { CricketTableComponent } from './cricket-table/cricket-table.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { StudentFormComponent } from './student-form/student-form.component';
     StudentDashbordComponent,
     StudentListComponent,
     StudentTableComponent,
-    StudentFormComponent
+    StudentFormComponent,
+    CricketDashbordComponent,
+    CricketFormComponent,
+    CricketTableComponent
   ],
   imports: [
     BrowserModule,

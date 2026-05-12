@@ -30,7 +30,7 @@
                 </button>
             </td>
                <td>
-                <button mat-mini-fab color="warn" (click)="ondelete(std.stdId)">
+                <button mat-mini-fab color="warn" [disabled]="isactivestatus===std.stdId" (click)="ondelete(std.stdId)">
                     <mat-icon>delete</mat-icon>
                 </button>
             </td>

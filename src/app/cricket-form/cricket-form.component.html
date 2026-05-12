@@ -1,0 +1,39 @@
+<mat-card >
+    <div class="card">
+
+    <h1 class="text-center">{{isEDITMODE ? 'update' :'add'}}</h1>
+    <div class="card-body">
+        
+
+<div class="form-group">
+    <label for="">name</label>
+    <input type="text" class="form-control" #name>
+</div>
+
+
+<div class="form-group">
+    <label for="">country</label>
+    <input type="text" class="form-control" #country>
+</div>
+
+
+<div class="form-group">
+    <label for="">role</label>
+    <input type="text" class="form-control" #role>
+</div>
+
+
+
+<div class="form-group">
+    <label for="">team</label>
+    <input type="text" class="form-control" #team>
+</div>
+  
+<button mat-raised-button color="primary" *ngIf="!isEDITMODE" (click)="onaddbtn()">add</button>
+<button mat-raised-button color="accent" *ngIf="isEDITMODE" (click)="onupdate()">update</button>
+
+
+
+    </div>
+</div>
+</mat-card>

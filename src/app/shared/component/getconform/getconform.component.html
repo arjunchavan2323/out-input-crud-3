@@ -1,4 +1,4 @@
-<p>{{getmsg || ' are you sure delete data works!'}}</p>
+<!-- <p>{{getmsg || ' are you sure delete data works!'}}</p>
 
 
 <div class="card">
@@ -7,5 +7,37 @@
             <button mat-raised-button color="primary" (click)="onclick(true)">yes</button>
             <button mat-raised-button color="accent" (click)="onclick(false)">No</button>
         </div>
+    </div>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>{{getconfirm||'are u sure you want to remove data'}}</p>
+
+
+<div class="card">
+
+    <div class="card-body d-flex justify-content-between">
+        <button 
+        (click)="onclick(true)"
+        mat-raised-button color="primary">Yes</button>
+        <button
+        (click)="onclick(false)"
+
+         mat-raised-button color="primary">No</button>
     </div>
 </div>

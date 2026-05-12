@@ -1,0 +1,10 @@
+
+
+<div class="row">
+    <div class="col-md-4">
+        <app-cricket-form (eventupdate)="onupdate($event)" [getcricket]="editcricket" (eventadd)="onaddbtn($event)"></app-cricket-form>
+    </div>
+    <div class="col-md-8">
+            <app-cricket-table (eventedit)="oneditbtn($event)" (eventremove)="onremove($event)" [getcricket]="cricketPlayers"></app-cricket-table>
+    </div>
+</div>

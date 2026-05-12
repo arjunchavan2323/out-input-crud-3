@@ -1,0 +1,46 @@
+
+
+<mat-card class="card-responsive mt-3">
+    
+
+<table class="table table-bordered" *ngIf="getcricket.length >0; else nocricket">
+    <thead>
+        <tr>
+            <th>sr no</th>
+            <th>name</th>
+            <th>country</th>
+            <th>role</th>
+            <th>team</th>
+            <th>edit</th>
+            <th>delete</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cricket of getcricket;index as i">
+            <td>{{i+1}}</td>
+            <td>{{cricket.name}}</td>
+            <td>{{cricket.country}}</td>
+            <td>{{cricket.role}}</td>
+            <td>{{cricket.team}}</td>
+            <td>
+                <button mat-mini-fab color="warn" (click)="oneditbtn(cricket)">
+                    <mat-icon>edit</mat-icon>
+                </button>
+            </td>
+             <td>
+                <button color="accent" mat-mini-fab (click)="onremove(cricket.id)"
+                [disabled]="isActivestatus===cricket.id"
+                >
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</mat-card>
+
+
+<ng-template #nocricket>
+    <p class="alert alert-danger">pls fill up the data !!!</p>
+</ng-template>

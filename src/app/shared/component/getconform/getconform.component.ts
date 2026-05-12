@@ -7,17 +7,40 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./getconform.component.scss']
 })
 export class GetconformComponent implements OnInit {
-getmsg !:string
-  constructor(private _matdailogref : MatDialogRef<GetconformComponent>,
-    @Inject(MAT_DIALOG_DATA) msg : string
-  ) { 
-    this.getmsg=msg
-  }
-  ngOnInit(): void {
-  }
+  getconfirm!:string
+ngOnInit(): void {
+ 
+}
+constructor(private _matdialogref:MatDialogRef<GetconformComponent>,
+  @Inject(MAT_DIALOG_DATA)msg:string
+){
+this.getconfirm=msg;
+}
+
+  // constructor(private _matdailogref : MatDialogRef<GetconformComponent>,
+  //   @Inject(MAT_DIALOG_DATA) msg : string
+  // ) { 
+  //   this.getmsg=msg
+  // }
+  // ngOnInit(): void {
+  // }
+
+  // onclick(flag:boolean){
+  //    this._matdailogref.close(flag)
+  // }
+
+
+
+
+
+
+
+
+
+
 
   onclick(flag:boolean){
-     this._matdailogref.close(flag)
+    this._matdialogref.close(flag)
   }
 
 }
