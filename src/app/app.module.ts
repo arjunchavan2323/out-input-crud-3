@@ -15,6 +15,9 @@ import { StudentFormComponent } from './student-form/student-form.component';
 import { CricketDashbordComponent } from './cricket-dashbord/cricket-dashbord.component';
 import { CricketFormComponent } from './cricket-form/cricket-form.component';
 import { CricketTableComponent } from './cricket-table/cricket-table.component';
+import { PolititionDashbordComponent } from './shared/component/politition-dashbord/politition-dashbord.component';
+import { PolititionFormComponent } from './shared/component/politition-form/politition-form.component';
+import { PolititionCardComponent } from './shared/component/politition-card/politition-card.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { CricketTableComponent } from './cricket-table/cricket-table.component';
     StudentFormComponent,
     CricketDashbordComponent,
     CricketFormComponent,
-    CricketTableComponent
+    CricketTableComponent,
+    PolititionDashbordComponent,
+    PolititionFormComponent,
+    PolititionCardComponent
   ],
   imports: [
     BrowserModule,

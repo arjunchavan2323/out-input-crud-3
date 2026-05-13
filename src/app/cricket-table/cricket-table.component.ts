@@ -13,6 +13,7 @@ export class CricketTableComponent implements OnInit {
 @Output()eventremove:EventEmitter<string>=new EventEmitter <string>()
 @Output()eventedit:EventEmitter<icrick>=new EventEmitter <icrick>()
 
+
   constructor(private _matdailog : MatDialog) { }
 
   ngOnInit(): void {
@@ -40,8 +41,7 @@ if(crick.id){
       
 this.eventedit.emit(crick)
 this.isActivestatus=crick.id
-}else{
-  this.isActivestatus==crick.id
+
 }
 
   }

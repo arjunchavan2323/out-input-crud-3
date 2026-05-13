@@ -55,6 +55,8 @@ cricketPlayers:Array<icrick> = [
   onupdate(update:icrick){
     let getindex=this.cricketPlayers.findIndex(t => (t.id===update.id))
     this.cricketPlayers[getindex]=update
+ 
   }
+
 
 }

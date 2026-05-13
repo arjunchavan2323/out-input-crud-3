@@ -1,24 +1,22 @@
-
-
 <div class="card">
     <h1 class="text-center">{{iseditmode ? 'update Todo' :'add todo'}}</h1>
     <div class="card-body">
-        
 
-<div class="form-group">
-    <label for="">TodoItem</label>
-    <input type="text" class="form-control" #TodoItem>
-</div>
 
-<div class="form-group">
-    <label for="">iscomplete</label>
-    <select type="text" class="form-control" #iscomplete>
-        <option value="true">Yes</option>
-        <option value="False">No</option>
+        <div class="form-group">
+            <label for="">TodoItem</label>
+            <input type="text" class="form-control" #TodoItem>
+        </div>
 
-    </select>
-</div>
-<button mat-raised-button color="primary" *ngIf="!iseditmode" (click)="onaddtodo()">Add Todo</button>
-<button mat-raised-button color="primary" *ngIf="iseditmode" (click)="onupdate()">update</button>
+        <div class="form-group">
+            <label for="">iscomplete</label>
+            <select type="text" class="form-control" #iscomplete>
+                <option value="true">Yes</option>
+                <option value="False">No</option>
+
+            </select>
+        </div>
+        <button mat-raised-button color="primary" *ngIf="!iseditmode" (click)="onaddtodo()">Add Todo</button>
+        <button mat-raised-button color="primary" *ngIf="iseditmode" (click)="onupdate()">update</button>
     </div>
 </div>

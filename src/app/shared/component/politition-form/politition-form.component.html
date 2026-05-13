@@ -1,0 +1,42 @@
+
+    <div class="col-md-8 offset-md-2 mb-4">
+        <mat-card class="table-responsive">
+              <h1 class="text-center">{{isinEDITMODE ? 'update Politicition' :'Add Politicition'}}</h1>
+        <div class="form-group">
+            <label for="">name</label>
+            <input type="text" class="form-control" #name>
+        </div>
+
+        <div class="form-group">
+            <label for="">party</label>
+            <input type="text" class="form-control" #party>
+        </div>
+
+        <div class="form-group">
+            <label for="">position</label>
+            <input type="text" class="form-control" #position>
+        </div>
+
+        <div class="form-group">
+            <label for="">state</label>
+            <input type="text" class="form-control" #state>
+        </div>
+
+
+        <div class="form-group">
+            <label for="">image</label>
+            <input type="text" class="form-control" #image>
+        </div>
+             
+
+        <button class="btn-block" *ngIf="!isinEDITMODE" mat-raised-button color="primary"
+        (click)="onaddpoliticion()"
+        > Add politicition</button>
+        <button class="btn-block" *ngIf="isinEDITMODE" mat-raised-button color="primary"
+        (click)="onupdate()"
+        > Update politicition</button>
+
+
+
+        </mat-card>
+    </div>

@@ -1,0 +1,32 @@
+<div class="row">
+    
+
+<div class="col-md-4 mb-4" *ngFor="let poly of getpoliticition">
+    
+<mat-card class="h-100" >
+    <mat-card-title>
+        {{poly.name}}
+        <p>{{poly.party}}</p>
+    </mat-card-title>
+    <mat-card-subtitle>{{poly.position}}
+        <p>{{poly.state}}</p>
+    </mat-card-subtitle>
+    <mat-card-content>
+        <img class="w-100" [src]="poly.image" [alt]="poly.name">
+    </mat-card-content>
+    <mat-card-actions class="d-flex justify-content-between"
+    (click)="oneditbtn(poly)">
+        <button mat-raised-button color="primary"
+        >
+            <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-raised-button color="accent"
+        (click)="onremove(poly.id)"
+        
+        >
+            <mat-icon>delete</mat-icon>
+        </button>
+    </mat-card-actions>
+</mat-card>
+</div>
+</div>
