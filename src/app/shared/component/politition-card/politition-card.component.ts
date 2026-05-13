@@ -30,6 +30,8 @@ this.eventedit.emit(politition)
 
 
 
+
+
   }
 
   onremove(id:string){
